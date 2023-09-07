@@ -10,142 +10,124 @@ export class UpdatesList extends Component {
       {
         id: 1,
         title: "Completed",
-        desc: "loremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm",
+        summary:
+          "loremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm",
+        desc: "ceci est une tres longue desc loremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm ",
         date: "04/09/2022",
-        status: "En cours",
-        priority: "Low",
+        status: "in progress",
+        priority: "low",
         version: "2.0",
       },
       {
         id: 2,
         title: "Completed",
-        desc: "test1",
+        summary: "test1",
+        desc: "ceci est une tres longue desc loremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm ",
         date: "04/09/2022",
-        status: "En cours",
-        priority: "Immediate",
+        status: "completed",
+        priority: "immediate",
         version: "2.0",
       },
       {
         id: 3,
         title: "Completed",
-        desc: "test1",
+        summary: "test1",
+        desc: "ceci est une tres longue desc loremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm ",
         date: "04/09/2022",
-        status: "En cours",
-        priority: "Normal",
+        status: "in progress",
+        priority: "normal",
         version: "2.0",
       },
       {
         id: 4,
         title: "Completed",
-        desc: "test1",
+        summary: "test1",
         date: "04/09/2022",
-        status: "En cours",
-        priority: "Low",
+        desc: "ceci est une tres longue desc loremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm ",
+        status: "completed",
+        priority: "low",
         version: "2.0",
       },
       {
         id: 5,
         title: "Completed",
-        desc: "test1",
+        summary: "test1",
+        desc: "ceci est une tres longue desc loremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm ",
         date: "04/09/2022",
-        status: "En cours",
-        priority: "Low",
+        status: "in progress",
+        priority: "low",
         version: "2.0",
       },
       {
         id: 6,
         title: "Completed",
-        desc: "test1",
+        summary: "test1",
+        desc: "ceci est une tres longue desc loremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm ",
         date: "04/09/2022",
-        status: "En cours",
-        priority: "Low",
+        status: "in progress",
+        priority: "low",
         version: "2.0",
       },
       {
         id: 7,
         title: "Completed",
-        desc: "test1",
+        summary: "test1",
+        desc: "ceci est une tres longue desc loremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm ",
         date: "04/09/2022",
-        status: "En cours",
-        priority: "Low",
+        status: "in progress",
+        priority: "low",
         version: "2.0",
       },
       {
         id: 8,
         title: "Completed",
-        desc: "test1",
+        summary: "test1",
+        desc: "ceci est une tres longue desc loremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm ",
         date: "04/09/2022",
-        status: "En cours",
-        priority: "Low",
-        version: "2.0",
-      },
-      {
-        id: 9,
-        title: "Completed",
-        desc: "test1",
-        date: "04/09/2022",
-        status: "En cours",
-        priority: "Low",
-        version: "2.0",
-      },
-      {
-        id: 10,
-        title: "Completed",
-        desc: "test1",
-        date: "04/09/2022",
-        status: "En cours",
-        priority: "Low",
-        version: "2.0",
-      },
-      {
-        id: 11,
-        title: "Completed",
-        desc: "test1",
-        date: "04/09/2022",
-        status: "En cours",
-        priority: "Low",
-        version: "2.0",
-      },
-      {
-        id: 12,
-        title: "Completed",
-        desc: "test1",
-        date: "04/09/2022",
-        status: "En cours",
-        priority: "Low",
-        version: "2.0",
-      },
-      {
-        id: 13,
-        title: "Completed",
-        desc: "test1",
-        date: "04/09/2022",
-        status: "En cours",
-        priority: "Low",
-        version: "2.0",
-      },
-      {
-        id: 14,
-        title: "Completed",
-        desc: "test1",
-        date: "04/09/2022",
-        status: "En cours",
-        priority: "Low",
+        status: "in progress",
+        priority: "low",
         version: "2.0",
       },
     ],
-    filter: "All",
+    filter: "all",
   };
+
+  filterAll = () => {
+    this.setState({
+      filter: "all",
+    });
+  };
+
+  filterInProgress = () => {
+    this.setState({
+      filter: "in-progress",
+    });
+  };
+
+  filterCompleted = () => {
+    this.setState({
+      filter: "completed",
+    });
+  };
+
   render() {
     return (
       <div>
         <div className={styles.header} style={{ fontFamily: "Poppins" }}>
           <div className={styles["updates-type"]}>
-            <button className={styles["updates-all"]}>All</button>
-            <button className={styles["updates-in-progress"]}>
+            <button className={styles["updates-all"]} onClick={this.filterAll}>
+              All
+            </button>
+            <button
+              className={styles["updates-in-progress"]}
+              onClick={this.filterInProgress}
+            >
               Update in progress
             </button>
-            <button className={styles["updates-completed"]}>
+            <button
+              className={styles["updates-completed"]}
+              onClick={this.filterCompleted}
+            >
               Update Completed
             </button>
           </div>
@@ -170,18 +152,56 @@ export class UpdatesList extends Component {
               overflowY: "auto",
             }}
           >
-            {this.state.updates.map((update) => (
-              <Update
-                key={update.id}
-                id={update.id}
-                title={update.title}
-                desc={update.desc}
-                date={update.date}
-                status={update.status}
-                priority={update.priority}
-                version={update.version}
-              />
-            ))}
+            {(() => {
+              switch (this.state.filter) {
+                case "all":
+                  return this.state.updates.map((update) => (
+                    <Update
+                      key={update.id}
+                      id={update.id}
+                      title={update.title}
+                      summary={update.summary}
+                      desc={update.desc}
+                      date={update.date}
+                      status={update.status}
+                      priority={update.priority}
+                      version={update.version}
+                    />
+                  ));
+                case "in-progress":
+                  return this.state.updates
+                    .filter((update) => update.status === "in progress")
+                    .map((update) => (
+                      <Update
+                        key={update.id}
+                        id={update.id}
+                        title={update.title}
+                        summary={update.summary}
+                        date={update.date}
+                        status={update.status}
+                        priority={update.priority}
+                        version={update.version}
+                      />
+                    ));
+                case "completed":
+                  return this.state.updates
+                    .filter((update) => update.status === "completed")
+                    .map((update) => (
+                      <Update
+                        key={update.id}
+                        id={update.id}
+                        title={update.title}
+                        summary={update.summary}
+                        date={update.date}
+                        status={update.status}
+                        priority={update.priority}
+                        version={update.version}
+                      />
+                    ));
+                default:
+                  return null;
+              }
+            })()}
           </div>
         </div>
       </div>
