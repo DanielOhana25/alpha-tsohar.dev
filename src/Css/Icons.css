@@ -1,0 +1,40 @@
+/* HeaderMain.jsx */
+.bi-printer-fill {
+  font-size: x-large;
+}
+
+/*CreateTicket.jsx*/
+.bi-cloud-upload {
+  margin-right: 3%;
+  font-size: large;
+}
+
+/*SignIn.jsx*/
+.bi-person,
+.bi-file-lock2 {
+  font-size: 150%;
+  width: 15%;
+}
+
+/*SlideBar.jsx */
+
+.bi-grid,
+.bi-ticket-perforated,
+.bi-arrow-repeat,
+.bi-receipt-cutoff,
+.bi-chat-right-text,
+.bi-box-arrow-right,
+.bi-calendar-week {
+  margin-right: 2vh;
+}
+@media (max-width: 800px) {
+  .bi-grid,
+  .bi-ticket-perforated,
+  .bi-arrow-repeat,
+  .bi-receipt-cutoff,
+  .bi-chat-right-text,
+  .bi-box-arrow-right,
+  .bi-calendar-week {
+    display: none;
+  }
+}

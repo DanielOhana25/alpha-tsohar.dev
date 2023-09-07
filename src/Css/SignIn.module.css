@@ -1,0 +1,61 @@
+body {
+  background-color: #d4d2d5;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.signIn {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#passwordInput,
+#emailInput {
+  border: 0px none #454167;
+  background-color: #454167;
+  color: white;
+  border-radius: 5px;
+  width: 70%;
+}
+.loginBtn {
+  background-color: #33b197;
+  border: 2px solid #33b197;
+  border-radius: 30px;
+  color: white;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 150%;
+}
+
+.password,
+.email {
+  display: flex;
+  border: 2px solid #454167;
+  background-color: #454167;
+  border-radius: 5px;
+  align-items: center;
+  width: 100%;
+}
+.signInFunctions {
+  display: flex;
+  align-items: normal;
+  font-size: small;
+  justify-content: space-between;
+}
+.rememberchkBox {
+  height: 20px;
+}
+.remember {
+  display: flex;
+}
+.forgotPassword {
+  text-decoration: none;
+}
+.forgotPassword:hover {
+  text-decoration: underline;
+}

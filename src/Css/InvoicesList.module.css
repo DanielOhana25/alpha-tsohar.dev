@@ -1,0 +1,48 @@
+.header {
+  height: 7vh;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.invoices-type {
+  display: flex;
+  margin: 1%;
+}
+.invoices-all,
+.invoices-oready,
+.invoices-ready {
+  white-space: nowrap;
+  background-color: #e5e0eb;
+  border: none;
+  font-size: small;
+  padding: 10px;
+}
+.invoices-all {
+  border-radius: 30px 0 0 30px;
+}
+.invoices-ready {
+  border-radius: 0 30px 30px 0;
+}
+
+.excel,
+.print {
+  background-color: #e5e0eb;
+  border-radius: 30px 30px 30px 30px;
+  border: none;
+}
+.excel:hover,
+.print:hover,
+.invoices-ready:hover,
+.invoices-oready:hover,
+.invoices-all:hover {
+  background-color: #48b2ff;
+  color: white;
+}
+
+.invoices {
+  height: 96%;
+  width: 96%;
+  margin: 2%;
+}

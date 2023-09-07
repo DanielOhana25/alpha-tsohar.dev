@@ -1,0 +1,38 @@
+.header {
+  height: 7vh;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.updates-all,
+.updates-in-progress,
+.updates-completed,
+.updates-daily,
+.updates-weekly,
+.updates-yearly {
+  white-space: nowrap;
+  background-color: #e5e0eb;
+  border: none;
+  font-size: small;
+  padding: 10px;
+}
+.updates-daily,
+.updates-all {
+  border-radius: 30px 0 0 30px;
+  margin-left: 20px;
+}
+.updates-yearly,
+.updates-completed {
+  border-radius: 0 30px 30px 0;
+}
+.updates-all:hover,
+.updates-in-progress:hover,
+.updates-completed:hover,
+.updates-daily:hover,
+.updates-weekly:hover,
+.updates-yearly:hover {
+  background-color: #48b2ff;
+  color: white;
+}

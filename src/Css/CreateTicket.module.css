@@ -1,0 +1,124 @@
+.anomaly {
+  display: flex;
+  align-items: center;
+}
+
+.anomalyForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 1%;
+}
+.anomaly-details {
+  height: 100vh;
+  width: 50%;
+  flex-direction: column;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+.anomaly-content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 50%;
+  margin-top: 2%;
+}
+
+.subject-anomaly {
+  background-color: #f3f6f9;
+  border: none;
+  border-radius: 5px;
+  padding: 2%;
+  width: 70%;
+}
+
+select {
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f6f9;
+  border: none;
+  border-radius: 5px;
+  padding: 2%;
+  width: 70%;
+}
+.descAnomalyInput {
+  height: 30%;
+  border: none;
+  background-color: #f3f6f9;
+  margin-right: 5%;
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+.filesAnomaly {
+  height: 15%;
+  border: none;
+  background-color: #f3f6f9;
+  margin-right: 5%;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  overflow-y: auto;
+}
+.browseFilesAnomaly {
+  display: flex;
+  height: 5%;
+  border: none;
+  background-color: #f3f6f9;
+  align-items: center;
+  margin-right: 5%;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  overflow: hidden;
+}
+.imgNameBrowseAnomaly {
+  width: 80%;
+  font-size: small;
+  margin-top: 2%;
+  margin-left: 2%;
+}
+
+.browseAnomalyInput {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.browseAnomalyBtn {
+  background-color: #cbd5e1;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 1%;
+  cursor: pointer;
+}
+
+.files-displaying {
+  height: 30%;
+  border: none;
+  background-color: #f3f6f9;
+  margin-right: 5%;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  overflow-y: auto;
+}
+
+.submitAnomalyBtn {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 3%;
+  margin-right: 5%;
+}
+
+.anomalyCancelBtn {
+  border-radius: 30px;
+  border: 1px solid #d4d2d5;
+  background-color: #f3f6f9;
+  margin-right: 2%;
+}
+.anomalySaveBtn {
+  border-radius: 30px;
+  border: none;
+  background-color: #48b2ff;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}

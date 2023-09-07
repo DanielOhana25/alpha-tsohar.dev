@@ -1,0 +1,10 @@
+.main {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1vh;
+  gap: 15px;
+  height: 90vh;
+  margin: 3vh;
+  overflow: hidden;
+}

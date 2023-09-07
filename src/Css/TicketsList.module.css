@@ -1,0 +1,26 @@
+.table-container {
+  margin-inline: 10px;
+  overflow-y: auto;
+}
+.table-tickets {
+  width: 100%;
+  border-radius: 10px;
+  font-size: small;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.table-tickets th,
+.table-tickets td {
+  border: 1px solid white;
+  padding: 3px;
+  padding-block: 5px;
+  text-align: center;
+}
+.table-tickets th {
+  background-color: #e5e0eb;
+  border: 1px solid #e5e0eb;
+  font-weight: 100;
+  font-size: small;
+  /* Autres styles pour les en-têtes de colonne */
+}
