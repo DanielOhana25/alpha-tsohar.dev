@@ -2,22 +2,31 @@ import React, { Component } from "react";
 import styles from "../Css/CreateTicket.module.css";
 import File from "./File";
 import { format } from "date-fns";
+import { Link } from "react-router-dom";
+import logo from "../imgs/mamane.tech.jpeg";
 import "../Css/Icons.css";
 
 class CreateTicket extends React.Component {
+  //Etat
+
   state = {
     fileNameToUpload: "",
     uploadedFiles: [],
     tickets: JSON.parse(localStorage.getItem("tickets")) || [], // Chargez les tickets depuis le localStorage
   };
 
+  //Comportements
+
+  componentWillUnmount() {
+    // Réinitialiser l'état selectedTicket lors du démontage du composant
+    this.props.setSelectedTicket(null);
+  }
+
   setTicketData = () => {
     const formattedDate = format(new Date(), "dd/MM/yy");
+    const { tickets } = this.state;
     const newTicket = {
-      id:
-        this.state.tickets.length > 0
-          ? this.state.tickets[this.state.tickets.length - 1].id + 1
-          : 1, // Auto-incrémentez l'ID,
+      id: tickets.length > 0 ? tickets[tickets.length - 1].id + 1 : 1,
       subject: document.getElementById("subject-anomaly").value,
       category: document.getElementById("category-anomaly").value,
       reproducibility: document.getElementById("reproducibility-anomaly").value,
@@ -29,19 +38,8 @@ class CreateTicket extends React.Component {
     };
     // Stockez les données dans le localStorage
     const updatedTickets = [...this.state.tickets, newTicket];
-
-    this.setState(
-      {
-        tickets: updatedTickets,
-      },
-      () => {
-        // Stockez les données de tous les tickets dans le localStorage
-        localStorage.setItem("tickets", JSON.stringify(updatedTickets));
-
-        // Appelez la méthode pour afficher la liste des tickets
-        this.props.displayTicketsList();
-      }
-    );
+    localStorage.setItem("tickets", JSON.stringify(updatedTickets));
+    this.setState({ tickets: updatedTickets });
   };
 
   chosenFile = (event) => {
@@ -68,6 +66,8 @@ class CreateTicket extends React.Component {
 
   render() {
     const selectedTicket = this.props.selectedTicket;
+    const typeUser = this.props.typeUser;
+
     return (
       <div className={styles.anomaly}>
         <div className={styles["anomaly-details"]}>
@@ -214,8 +214,6 @@ class CreateTicket extends React.Component {
                   <option></option>
                   <option>Low</option>
                   <option>Normal</option>
-                  <option>High</option>
-                  <option>Urgent</option>
                   <option>Immediate</option>
                 </select>
               </>
@@ -229,8 +227,6 @@ class CreateTicket extends React.Component {
                   <option></option>
                   <option>Low</option>
                   <option>Normal</option>
-                  <option>High</option>
-                  <option>Urgent</option>
                   <option>Immediate</option>
                 </select>
               </>
@@ -290,7 +286,96 @@ class CreateTicket extends React.Component {
           {selectedTicket ? (
             <>
               <label>files : </label>
-              <div className={styles["files-displaying"]}></div>
+              <div className={styles["files-displaying"]}>
+                <img
+                  src={logo}
+                  className="img-fluid"
+                  alt="logo"
+                  style={{
+                    width: "18%",
+                    height: "96%",
+                    marginBlock: "2%",
+                    marginInline: "2%",
+                  }}
+                />
+                <img
+                  src={logo}
+                  className="img-fluid"
+                  alt="logo"
+                  style={{
+                    width: "18%",
+                    height: "96%",
+                    marginBlock: "2%",
+                    marginInline: "2%",
+                  }}
+                />
+                <img
+                  src={logo}
+                  className="img-fluid"
+                  alt="logo"
+                  style={{
+                    width: "18%",
+                    height: "96%",
+                    marginBlock: "2%",
+                    marginInline: "2%",
+                  }}
+                />
+                <img
+                  src={logo}
+                  className="img-fluid"
+                  alt="logo"
+                  style={{
+                    width: "18%",
+                    height: "96%",
+                    marginBlock: "2%",
+                    marginInline: "2%",
+                  }}
+                />
+                <img
+                  src={logo}
+                  className="img-fluid"
+                  alt="logo"
+                  style={{
+                    width: "18%",
+                    height: "96%",
+                    marginBlock: "2%",
+                    marginInline: "2%",
+                  }}
+                />
+                <img
+                  src={logo}
+                  className="img-fluid"
+                  alt="logo"
+                  style={{
+                    width: "18%",
+                    height: "96%",
+                    marginBlock: "2%",
+                    marginInline: "2%",
+                  }}
+                />
+                <img
+                  src={logo}
+                  className="img-fluid"
+                  alt="logo"
+                  style={{
+                    width: "18%",
+                    height: "96%",
+                    marginBlock: "2%",
+                    marginInline: "2%",
+                  }}
+                />
+                <img
+                  src={logo}
+                  className="img-fluid"
+                  alt="logo"
+                  style={{
+                    width: "18%",
+                    height: "96%",
+                    marginBlock: "2%",
+                    marginInline: "1%",
+                  }}
+                />
+              </div>
             </>
           ) : (
             <>
@@ -328,20 +413,38 @@ class CreateTicket extends React.Component {
           )}
 
           <div className={styles.submitAnomalyBtn}>
-            <button
-              className={styles.anomalyCancelBtn}
-              onClick={this.props.displayTicketsList}
-            >
-              Cancel
-            </button>
-
+            {selectedTicket ? (
+              <button className={styles.anomalyCancelBtn}>
+                <Link
+                  style={{ textDecoration: "none", color: "black" }}
+                  to={"/ticketsList"}
+                >
+                  Back
+                </Link>
+              </button>
+            ) : (
+              <button className={styles.anomalyCancelBtn}>
+                <Link
+                  style={{ textDecoration: "none", color: "black" }}
+                  to={"/ticketsList"}
+                >
+                  Cancel
+                </Link>
+              </button>
+            )}
             {selectedTicket ? null : (
               <>
                 <button
                   className={styles.anomalySaveBtn}
                   onClick={this.setTicketData}
                 >
-                  Save
+                  <Link
+                    style={{ textDecoration: "none", color: "white" }}
+                    to={"/ticketsList"}
+                  >
+                    {" "}
+                    Save
+                  </Link>
                 </button>
               </>
             )}

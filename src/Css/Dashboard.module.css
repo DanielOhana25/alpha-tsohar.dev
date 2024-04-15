@@ -1,0 +1,45 @@
+@media (max-width: 800px) {
+  .dashboard-welcome,
+  .dashboard-tickets,
+  .dashboard-invoices,
+  .dashboard-linesCode,
+  .dashboard-database,
+  .dashboard-updates,
+  .dashboard-graph {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .dashboard-welcome,
+  .dashboard-tickets,
+  .dashboard-invoices,
+  .dashboard-linesCode,
+  .dashboard-database,
+  .dashboard-updates,
+  .dashboard-graph {
+    font-size: 24px;
+  }
+}
+
+.dashboard-graphDay,
+.dashboard-graphWeek,
+.dashboard-graphMonth {
+  white-space: nowrap;
+  background-color: #e5e0eb;
+  border: none;
+  font-size: small;
+  height: 100%;
+}
+.dashboard-graphDay {
+  border-radius: 30px 0 0 30px;
+}
+.dashboard-graphMonth {
+  border-radius: 0 30px 30px 0;
+}
+.dashboard-graphDay:hover,
+.dashboard-graphWeek:hover,
+.dashboard-graphMonth:hover {
+  background-color: #48b2ff;
+  color: white;
+}
