@@ -32,16 +32,21 @@
   border-radius: 5px;
 }
 .company {
-  width: 40%;
-  justify-content: end;
+  justify-content: space-between;
   display: flex;
   align-items: center;
+  height: 80%;
 }
-#companyName {
-  margin: 2vh;
+
+.companyRight {
+  margin-left: auto;
+  /* margin-right: 2vh; */
 }
+.company:hover {
+  background-color: #e5e0eb;
+}
+
 .bi-person-circle {
-  margin-left: 10%;
   margin-right: 2vh;
   font-size: x-large;
 }

@@ -10,8 +10,6 @@ export class UpdatesList extends Component {
       {
         id: 1,
         title: "Completed",
-        summary:
-          "loremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm",
         desc: "ceci est une tres longue desc loremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm ",
         date: "04/09/2022",
         status: "in progress",
@@ -63,7 +61,7 @@ export class UpdatesList extends Component {
         title: "Completed",
         summary: "test1",
         desc: "ceci est une tres longue desc loremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm ",
-        date: "04/09/2022",
+        date: "05/09/2022",
         status: "in progress",
         priority: "low",
         version: "2.0",
@@ -73,7 +71,7 @@ export class UpdatesList extends Component {
         title: "Completed",
         summary: "test1",
         desc: "ceci est une tres longue desc loremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm ",
-        date: "04/09/2022",
+        date: "05/09/2022",
         status: "in progress",
         priority: "low",
         version: "2.0",
@@ -111,8 +109,9 @@ export class UpdatesList extends Component {
   };
 
   render() {
+    const typeUser = this.props.typeUser;
     return (
-      <div>
+      <div style={{ height: "100%", width: "100%" }}>
         <div className={styles.header} style={{ fontFamily: "Poppins" }}>
           <div className={styles["updates-type"]}>
             <button className={styles["updates-all"]} onClick={this.filterAll}>
@@ -131,25 +130,31 @@ export class UpdatesList extends Component {
               Update Completed
             </button>
           </div>
-          <div style={{ display: "flex", alignItems: "center" }}>
-            <div>
+          <div
+            style={{ display: "flex", alignItems: "center", height: "100%" }}
+          >
+            <div style={{ marginRight: "2vh" }}>
               <DateSelector />
             </div>
-            <div style={{ marginInline: "5px" }}>
+            {/* <div
+              className={styles["updates-type2"]}
+              style={{ marginInline: "5px" }}
+            >
               <button className={styles["updates-daily"]}>Daily</button>
               <button className={styles["updates-weekly"]}>Weekly</button>
               <button className={styles["updates-yearly"]}>Yearly</button>
-            </div>
+            </div> */}
           </div>
         </div>
-        <div className={styles.container}>
+        <div className="container" style={{ height: "90%" }}>
           <div
             className={styles.updates}
             style={{
               display: "flex",
               flexDirection: "column",
-              maxHeight: "80vh",
+              height: "96%",
               overflowY: "auto",
+              marginTop: "2vh",
             }}
           >
             {(() => {
@@ -160,7 +165,6 @@ export class UpdatesList extends Component {
                       key={update.id}
                       id={update.id}
                       title={update.title}
-                      summary={update.summary}
                       desc={update.desc}
                       date={update.date}
                       status={update.status}
@@ -176,7 +180,7 @@ export class UpdatesList extends Component {
                         key={update.id}
                         id={update.id}
                         title={update.title}
-                        summary={update.summary}
+                        desc={update.desc}
                         date={update.date}
                         status={update.status}
                         priority={update.priority}
@@ -191,7 +195,7 @@ export class UpdatesList extends Component {
                         key={update.id}
                         id={update.id}
                         title={update.title}
-                        summary={update.summary}
+                        desc={update.desc}
                         date={update.date}
                         status={update.status}
                         priority={update.priority}

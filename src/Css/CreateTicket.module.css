@@ -93,7 +93,8 @@ select {
 }
 
 .files-displaying {
-  height: 30%;
+  height: 10%;
+
   border: none;
   background-color: #f3f6f9;
   margin-right: 5%;

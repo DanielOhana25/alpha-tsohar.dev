@@ -1,12 +1,13 @@
 .slideBar {
   color: white;
   background-color: #1d1a3b;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
 }
 .logo {
   height: 7vh;
-  width: 100%;
+  width: 90%;
+  margin-inline: 5%;
 }
 .slideBarUl {
   display: flex;

@@ -24,7 +24,8 @@
 .bi-receipt-cutoff,
 .bi-chat-right-text,
 .bi-box-arrow-right,
-.bi-calendar-week {
+.bi-calendar-week,
+.bi-layers-fill {
   margin-right: 2vh;
 }
 @media (max-width: 800px) {
@@ -34,7 +35,8 @@
   .bi-receipt-cutoff,
   .bi-chat-right-text,
   .bi-box-arrow-right,
-  .bi-calendar-week {
+  .bi-calendar-week,
+  .bi-layers-fill {
     display: none;
   }
 }
