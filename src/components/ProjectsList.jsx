@@ -20,6 +20,7 @@ class ProjectsList extends React.Component {
     // Chargez les données depuis le localStorage au montage du composant
     const storedProjects = JSON.parse(localStorage.getItem("projects")) || [];
     this.setState({ projects: storedProjects });
+
     console.log("remise a 0");
   };
 
@@ -104,7 +105,6 @@ class ProjectsList extends React.Component {
           </div> */}
           {/* </div> */}
         </div>
-
         <div
           style={{
             marginInline: "10px",
@@ -207,6 +207,7 @@ class ProjectsList extends React.Component {
                   desc={project.desc}
                   status={project.status}
                   date={project.date}
+                  setSelectedProject={this.props.setSelectedProject}
                 />
               ))}
             </tbody>

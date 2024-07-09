@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { Component } from "react";
+import React from "react";
 import Slidebar from "./components/SlideBar";
 import SignIn from "./components/SignIn";
 import Header from "./components/Header";
@@ -22,6 +22,7 @@ class App extends React.Component {
     selectedProject: "", // État pour stocker les données du project sélectionné
     isAuthenticated: false, // verifie s'il peut acceder
     type: "user",
+    user: "",
   };
 
   //Comportements
@@ -29,21 +30,26 @@ class App extends React.Component {
   setSelectedTicket = (ticket) => {
     this.setState({ selectedTicket: ticket }, () => {});
   };
+
   setSelectedProject = (project) => {
-    this.setState({ selectedProject: project }, () => {
-      alert("je suis une fonction ");
-    });
+    this.setState({ selectedProject: project }, () => {});
   };
 
-  // Fonction pour gérer l'authentification de l'utilisateur
-  handleAuthentication = (isAuthenticated, type) => {
+  handleAuthentication = (isAuthenticated, type, userEmail) => {
     if (isAuthenticated) {
-      this.setState({ isAuthenticated: true, type: type });
-      if (type === "admin") {
-        alert("Vous êtes connecté en tant qu'administrateur !");
-      } else {
-        alert("Vous êtes connecté en tant qu'utilisateur.");
-      }
+      this.setState(
+        { isAuthenticated: true, type: type, user: userEmail },
+        () => {
+          // Callback après la mise à jour de l'état
+          console.log("User state updated:", this.state.user); // Vérifie la mise à jour de l'état utilisateur
+          if (type === "admin") {
+            alert("Vous êtes connecté en tant qu'administrateur !");
+          } else {
+            alert("Vous êtes connecté en tant qu'utilisateur.");
+            alert(this.state.user); // Cette ligne doit maintenant afficher l'email correct
+          }
+        }
+      );
     }
   };
 
@@ -65,7 +71,12 @@ class App extends React.Component {
                     <Route
                       exact
                       path="/"
-                      element={<Dashboard typeUser={this.state.type} />}
+                      element={
+                        <Dashboard
+                          projects={this.state.porjects}
+                          typeUser={this.state.type}
+                        />
+                      }
                     />
                     <Route
                       exact
@@ -74,6 +85,7 @@ class App extends React.Component {
                         <TicketsList
                           // displayCreateTicket={this.displayCreateTicket}
                           setSelectedTicket={this.setSelectedTicket}
+                          typeUser={this.state.type}
                         />
                       }
                     />
@@ -97,6 +109,7 @@ class App extends React.Component {
                           selectedTicket={this.state.selectedTicket}
                           setSelectedTicket={this.setSelectedTicket}
                           typeUser={this.state.type}
+                          user={this.state.user}
                         />
                       }
                     />
@@ -106,7 +119,6 @@ class App extends React.Component {
                       element={
                         <ProjectsList
                           // displayCreateProject={this.displayCreateProject}
-
                           setSelectedProject={this.setSelectedProject}
                         />
                       }

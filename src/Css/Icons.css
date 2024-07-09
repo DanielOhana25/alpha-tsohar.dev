@@ -11,7 +11,8 @@
 
 /*SignIn.jsx*/
 .bi-person,
-.bi-file-lock2 {
+.bi-file-lock2,
+.bi-layers {
   font-size: 150%;
   width: 15%;
 }

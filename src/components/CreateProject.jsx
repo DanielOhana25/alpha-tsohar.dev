@@ -155,6 +155,56 @@ class CreateProject extends React.Component {
                 />
               </>
             )}
+
+            {selectedProject ? (
+              <>
+                {" "}
+                <label>Statut :</label>
+                <select
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    backgroundColor: "#f3f6f9",
+                    border: "none",
+                    bordeRadius: "5px",
+                    padding: "2%",
+                    width: "70%",
+                  }}
+                  id="status-project"
+                  value={selectedProject ? selectedProject.status : ""} // Utilisez la valeur du project sélectionné s'il existe
+                  readOnly
+                >
+                  <option></option>
+                  <option>Terminée</option>
+                  <option>En cours</option>
+                  <option>Prévu</option>
+                  <option>Annulé</option>
+                </select>
+              </>
+            ) : (
+              <>
+                {" "}
+                <label>Statut :</label>
+                <select
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    backgroundColor: "#f3f6f9",
+                    border: "none",
+                    bordeRadius: "5px",
+                    padding: "2%",
+                    width: "70%",
+                  }}
+                  id="status-project"
+                >
+                  <option></option>
+                  <option>Terminée</option>
+                  <option>En cours</option>
+                  <option>Prévu</option>
+                  <option>Annulé</option>
+                </select>
+              </>
+            )}
           </form>
         </div>
         <div

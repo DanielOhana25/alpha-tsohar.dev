@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "../Css/SignIn.module.css";
+import { format } from "date-fns";
 import "../Css/Icons.css";
 
 export default function SignIn({ handleAuthentication }) {
@@ -10,6 +11,7 @@ export default function SignIn({ handleAuthentication }) {
 
   // Récupération des utilisateurs depuis le localStorage
   const users = JSON.parse(localStorage.getItem("users")) || [];
+  const projects = JSON.parse(localStorage.getItem("projects")) || []; // Chargez les projects depuis le localStorage
 
   const isAdmin = (email) => {
     const adminEmails = ["admin1@example.com", "admin2@example.com"]; // Liste des adresses e-mail des administrateurs
@@ -26,6 +28,19 @@ export default function SignIn({ handleAuthentication }) {
     setUser({ ...user, email: e.target.value });
   };
 
+  const setProjectData = () => {
+    const formattedDate = format(new Date(), "dd/MM/yy");
+    const newProject = {
+      id: projects.length > 0 ? projects[projects.length - 1].id + 1 : 1,
+      name: document.getElementById("projectNameInput").value,
+      userEmail: user.email,
+      date: formattedDate,
+    };
+    // Stockez les données dans le localStorage
+    const updatedProjects = [...projects, newProject];
+    localStorage.setItem("projects", JSON.stringify(updatedProjects));
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault(); // pour que ca ne recharge pas
     if (isSignIn) {
@@ -35,7 +50,7 @@ export default function SignIn({ handleAuthentication }) {
         if (foundUser.password === user.password) {
           alert("Connexion réussie !");
           const userType = isAdmin(foundUser.email) ? "admin" : "user"; // Déterminer le type d'utilisateur
-          handleAuthentication(true, userType); // Passer le type d'utilisateur à la fonction de gestion de l'authentification
+          handleAuthentication(true, userType, user.email); // Passer le type d'utilisateur à la fonction de gestion de l'authentification
         } else {
           alert("Mot de passe incorrect !");
         }
@@ -75,6 +90,20 @@ export default function SignIn({ handleAuthentication }) {
               onChange={handleEmail}
             />
           </div>
+          {isSignIn ? (
+            ""
+          ) : (
+            <div className={styles.project}>
+              {" "}
+              <i className="bi bi-layers"></i>
+              <input
+                id="projectNameInput"
+                type="text"
+                placeholder="Project Name"
+                onChange={setProjectData}
+              />
+            </div>
+          )}
           <div className={styles.password}>
             <i className="bi bi-file-lock2"></i>
             <input

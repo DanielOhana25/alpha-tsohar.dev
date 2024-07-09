@@ -49,8 +49,22 @@ export default function Project(props) {
       <td style={styleTd}>{props.date}</td>
       <td style={styleTd}>
         <Link style={{ color: "black" }} to={"/createProject"}>
-          <i className="bi bi-pencil-square"></i>
+          <i
+            className="bi bi-pencil-square"
+            onClick={() => {
+              props.setSelectedProject(props);
+            }}
+          ></i>
         </Link>
+
+        {/* <Link style={{ color: "black" }} to={"/createTicket"}>
+          <i
+            className="bi bi-eye"
+            onClick={() => {
+              props.setSelectedTicket(props);
+            }}
+          ></i>
+        </Link> */}
       </td>
       <td style={styleTd}>
         <i

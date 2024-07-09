@@ -8,6 +8,7 @@ function Ticket(props) {
         <input type="checkbox"></input>
       </td>
       <td>{props.id}</td>
+      <td>{props.project}</td>
       <td>{props.subject}</td>
       <td>{props.category}</td>
       <td>{props.reproducibility}</td>
@@ -44,6 +45,18 @@ function Ticket(props) {
           ></i>
         </Link>
       </td>
+      {props.typeUser === "admin" ? (
+        <td>
+          <Link style={{ color: "black" }} to={"/createTicket"}>
+            <i
+              className="bi bi-pencil-square"
+              onClick={() => {
+                props.setSelectedTicket(props);
+              }}
+            ></i>
+          </Link>
+        </td>
+      ) : null}
     </tr>
   );
 }

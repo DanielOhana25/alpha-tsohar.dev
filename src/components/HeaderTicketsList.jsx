@@ -1,6 +1,6 @@
 import React from "react";
 
-function HeaderTicketsList() {
+function HeaderTicketsList(props) {
   return (
     <thead
       style={{
@@ -22,6 +22,7 @@ function HeaderTicketsList() {
           ></div>
         </th>
         <th>Identify</th>
+        <th>Project</th>
         <th>Subject</th>
         <th>Category</th>
         <th>Reproducibility</th>
@@ -31,6 +32,7 @@ function HeaderTicketsList() {
         <th>Status</th>
         <th>Date</th>
         <th>View</th>
+        {props.typeUser === "admin" ? <th>Edit</th> : null}
       </tr>
     </thead>
   );

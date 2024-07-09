@@ -15,7 +15,8 @@ body {
   transform: translate(-50%, -50%);
 }
 #passwordInput,
-#emailInput {
+#emailInput,
+#projetInput {
   border: 0px none #454167;
   background-color: #454167;
   color: white;
@@ -34,7 +35,8 @@ body {
 }
 
 .password,
-.email {
+.email,
+.project {
   display: flex;
   border: 2px solid #454167;
   background-color: #454167;

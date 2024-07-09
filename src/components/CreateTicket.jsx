@@ -27,6 +27,7 @@ class CreateTicket extends React.Component {
     const { tickets } = this.state;
     const newTicket = {
       id: tickets.length > 0 ? tickets[tickets.length - 1].id + 1 : 1,
+      project: this.DefineProject(),
       subject: document.getElementById("subject-anomaly").value,
       category: document.getElementById("category-anomaly").value,
       reproducibility: document.getElementById("reproducibility-anomaly").value,
@@ -64,10 +65,18 @@ class CreateTicket extends React.Component {
     this.setState({ uploadedFiles: updatedFiles });
   };
 
+  DefineProject = () => {
+    const projects = JSON.parse(localStorage.getItem("projects")) || [];
+    const userEmail = this.props.user; // L'email de l'utilisateur passé en props
+    const userProject = projects.find(
+      (project) => project.userEmail === userEmail
+    );
+    return userProject ? userProject.name : "Aucun projet trouvé";
+  };
+
   render() {
     const selectedTicket = this.props.selectedTicket;
     const typeUser = this.props.typeUser;
-
     return (
       <div className={styles.anomaly}>
         <div className={styles["anomaly-details"]}>
@@ -79,7 +88,7 @@ class CreateTicket extends React.Component {
                   className={styles["subject-anomaly"]}
                   id="subject-anomaly"
                   value={selectedTicket.subject}
-                  readOnly
+                  readOnly={typeUser === "admin" ? false : true}
                 />
               </>
             ) : (
@@ -436,7 +445,9 @@ class CreateTicket extends React.Component {
               <>
                 <button
                   className={styles.anomalySaveBtn}
-                  onClick={this.setTicketData}
+                  onClick={() => {
+                    this.setTicketData();
+                  }}
                 >
                   <Link
                     style={{ textDecoration: "none", color: "white" }}

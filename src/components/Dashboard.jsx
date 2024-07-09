@@ -11,6 +11,7 @@ import ProjectsList from "./ProjectsList";
 
 export class Dashboard extends Component {
   state = {
+    projects: [],
     updates: [
       {
         id: 1,
@@ -96,6 +97,13 @@ export class Dashboard extends Component {
     ],
   };
 
+  //comportement
+  componentDidMount = () => {
+    // Chargez les données depuis le localStorage au montage du composant
+    const storedProjects = JSON.parse(localStorage.getItem("projects")) || [];
+    this.setState({ projects: storedProjects });
+  };
+
   render() {
     return (
       <div style={{ height: "100%", width: "100%", fontFamily: "Poppins" }}>
@@ -179,7 +187,13 @@ export class Dashboard extends Component {
                   <BiTimeFive style={{ color: "#F39C12" }} />
                   <span style={{ marginLeft: "1vh" }}>Upcoming</span>
                 </div>
-                <span>3</span>
+                <span>
+                  {this.props.typeUser === "admin"
+                    ? this.state.projects.filter(
+                        (project) => project.status === "Prévu"
+                      ).length
+                    : "3"}
+                </span>
               </div>
 
               <div
@@ -195,7 +209,13 @@ export class Dashboard extends Component {
                   <CgTimelapse style={{ color: "#2196F3" }} />
                   <span style={{ marginLeft: "1vh" }}>In Progress</span>
                 </div>
-                <span>3</span>
+                <span>
+                  {this.props.typeUser === "admin"
+                    ? this.state.projects.filter(
+                        (project) => project.status === "En cours"
+                      ).length
+                    : "3"}
+                </span>
               </div>
 
               <div
@@ -212,7 +232,13 @@ export class Dashboard extends Component {
                   <BsCheckCircle style={{ color: "#8BC34A" }} />
                   <span style={{ marginLeft: "1vh" }}>Completed</span>
                 </div>
-                <span>3</span>
+                <span>
+                  {this.props.typeUser === "admin"
+                    ? this.state.projects.filter(
+                        (project) => project.status === "Terminée"
+                      ).length
+                    : "3"}
+                </span>
               </div>
             </>
           </div>
